@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.cice.myfragments.MainActivity">
+   <fragment
+       class="com.example.cice.myfragments.FragmentListado"
+       android:layout_width="0px"
+       android:layout_height="match_parent"
+       android:layout_weight="1"
+       android:id="@+id/fragmentListado"/>
+    <fragment
+        class="com.example.cice.myfragments.FragmentDetalle"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:id="@+id/fragmentDetalle"/>
+
+
+</LinearLayout>

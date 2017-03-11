@@ -1,5 +1,6 @@
 package com.example.cice.myviewpager;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Intent para compartir un mensaje de Texto en whatsapp
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+        sendIntent.setType("text/plain");
+        sendIntent.setPackage("com.whatsapp");
+        startActivity(sendIntent);
+
+
         viewPager=(ViewPager)findViewById(R.id.miviewpager);
         miPageAdapter= new MiPageAdapter(getSupportFragmentManager());
         viewPager.setAdapter(miPageAdapter);
